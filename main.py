@@ -1,16 +1,38 @@
-# This is a sample Python script.
+# declararea unei liste care să conțină elementele 7, 8, 9, 2, 3, 1, 4, 10, 5, 6 (în această ordine).
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+my_list = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
+print('my_list =', my_list)
 
+# afișarea unei alte liste ordonată ascendent (lista inițială trebuie păstrată în aceeași formă)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+my_sorted_list = my_list.copy()
+my_sorted_list.sort()
+print('my_sorted_list =', my_sorted_list)
 
+# afișarea unei liste ordonată descendent (lista inițială trebuie păstrată în aceeași formă)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+my_sorted_list = my_list.copy()
+my_sorted_list.sort(reverse=True)
+print('my_reversed_list =', my_sorted_list)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# afișarea numerelor pare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
+
+print('my_list =', my_list)
+my_sliced_list = my_list[1:4:2]+my_list[6:8]+my_list[-1:]
+
+# my_sliced_list.pop(2)
+
+print('my_even_list =', my_sliced_list)
+
+# afișarea numerelor impare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
+
+my_sliced_list = my_list[2:9:3]+my_list[:5:4]
+print('my_odd_list =', my_sliced_list)
+
+# afișarea elementelor multipli ai lui 3.
+
+for multiplu_3 in my_list:
+    if multiplu_3 % 3 == 0:
+        print('multiplii lui 3 =', multiplu_3)
+
+# a se păstra acuratețea indexilor - aceștia trebuie să fie cât mai specifici.
